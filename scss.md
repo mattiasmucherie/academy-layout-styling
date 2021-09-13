@@ -2,7 +2,7 @@
 
 ## Task 1
 
-In the folder exercise1 there is a index.html and target.css
+In the folder [./scss-exercise/](./scss-exercise/) there is a index.html and target.css
 Create the same output with a scss file as there is in target.css (omit the comments)
 
 ## Task 2
