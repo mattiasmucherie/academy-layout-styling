@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="#" class="thelink">The link</a>
+    <form>
+      <input type="text" class="thetext" value="I should be reversed" />
+      <input type="button" class="thebutton" value="Reverse text" />
+    </form>
+    <script>
+      const rndColor = () => {
+        return `rgb(${50 + Math.random() * 206}, ${50 + Math.random() * 206}, ${50 + Math.random() * 206})`;
+      };
+      document.querySelector(".thelink").addEventListener("click", (e) => {
+        e.target.style.color = rndColor();
+      });
+      document.querySelector(".thebutton").addEventListener("click", (e) => {
+        const theText = document.querySelector(".thetext");
+        let d = theText.value;
+        theText.value = d.split("").reverse().join("");
+      });
+      const getPastTime = (cb) => {
+        const t = new Date();
+        setTimeout(() => {
+          cb(t.getSeconds());
+        }, 5000);
+      };
+
+      getPastTime((r) => {
+        console.log(new Date().getSeconds(), r);
+      });
+
+      const aa = async () => {
+        return new Promise((res) => {
+          setTimeout(() => {
+            res("");
+          }, 5);
+        });
+      };
+    </script>
+  </body>
+</html>
