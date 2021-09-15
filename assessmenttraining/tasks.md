@@ -150,6 +150,10 @@ getWordPlays().then((rhyme) => {
 });
 ```
 
+### Bonus:
+
+Use a anyonymous self calling method and await the result instead of using .then()
+
 # UX & Design
 
 ## Question 1
