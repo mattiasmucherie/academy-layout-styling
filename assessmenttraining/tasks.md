@@ -135,7 +135,7 @@ Create a async function `getWordPlays()` that returns a promise that resolves wi
 ```javascript
 const arr = [
   "Katten musen tio tusen",
-  "Spagetti makaroner, tio miljoner",
+  "Spaghetti makaroner, tio miljoner",
   "Blomma blad, en miljard",
   "Kalas kanon, en miljon",
   "Ettning Tvåning Trening Fyrning Femning Sexning Sjuning Åttning Nining Tidning",
