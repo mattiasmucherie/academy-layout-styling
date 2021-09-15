@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #ececec;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#wrapper {
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+  .cardholder {
+    background: #f2f2f2;
+    margin: 100px auto;
+
+    border: 1px solid #e6e6e6;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    max-width: 600px;
+    min-height: 400px;
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    overflow: hidden;
+    position: relative;
+
+    &:before,
+    &:after {
+      content: "";
+      height: 100%;
+      width: 50%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: #fff;
+      transition: left 0.5s, right 0.5s;
+    }
+    &:after {
+      left: auto; /* Left trumphs right, so left needs to be auto. */
+      right: 0;
+    }
+    &:hover {
+      &:before {
+        left: -50%;
+      }
+      &:after {
+        right: -50%;
+      }
+    }
+    h1 {
+      text-align: center;
+    }
+    p {
+      line-height: 1.5rem;
+    }
+  }
+}
