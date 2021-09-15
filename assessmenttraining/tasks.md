@@ -95,7 +95,7 @@ Example use:
 
 ```javascript
 getPastTime(function (pastTime) {
-  console.log(new Date().getSeconds(), pastTime); //-> 32, 37 || 58, 3
+  console.log(new Date().getSeconds(), pastTime); //-> 37, 32 || 3, 58
 });
 ```
 
