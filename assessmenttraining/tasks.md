@@ -154,28 +154,6 @@ getWordPlays().then((rhyme) => {
 
 Use a anyonymous self calling method and await the result instead of using .then()
 
-# UX & Design
-
-## Question 1
-
-Think about the design process, what benefits do we get by working analog instead of digital.
-
-## Question 2
-
-What are the benefits with agile projects when developing software?
-
-## Question 3
-
-What roles exists in a scrum team?
-
-## Question 4
-
-Who decides what to work with during a sprint and adds it to the backlog?
-
-## Question 5
-
-What is the purpose of a daily scrum meeting, and what does it consist of?
-
 # Layout and Styling
 
 Using HTML and SCSS, recreate the following cards. Background images can be found in [backgrounds](./backgrounds)
