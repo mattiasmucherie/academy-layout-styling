@@ -23,7 +23,8 @@ HTML:
     <a href="#" class="clickme">The link</a>
     <script>
       const rndColor = () => {
-        return `rgb(${50 + Math.random() * 206}, ${50 + Math.random() * 206}, ${50 + Math.random() * 206})`;
+        const rndNumber = () => Math.floor(Math.random() * 255)
+        return `#${((1 << 24) + (Math.round(rndNumber()) << 16) + (Math.round(rndNumber()) << 8) + Math.round(rndNumber())).toString(16).substr(1)}`;
       };
     </script>
   </body>
