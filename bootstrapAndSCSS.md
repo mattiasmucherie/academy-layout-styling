@@ -4,7 +4,7 @@
 
 Create a empty html-page and include bootstrap from CDN (content delivery network). Then edit the html to create a jumbotron.
 
-> Hint: https://getbootstrap.com/docs/5.1/examples/jumbotron/
+> Hint: https://getbootstrap.com/docs/5.2/examples/jumbotron/
 
 ## Task 2
 
@@ -19,7 +19,7 @@ The form should allow the following information to be entered.
 - Favourite food (radiobuttons)
 - Other things you think would be nice.
 
-Standard components can be found on the following link: https://getbootstrap.com/docs/5.2/examples/
+> Hint: https://getbootstrap.com/docs/5.2/forms/overview/
 
 ## Task 3
 
@@ -28,7 +28,10 @@ Is all that CSS needed or can we skip parts of it without sacrificing too much l
 
 ## Task 4
 
-Using the images in canvas (the link is available in canvas; cats.zip), create a image carousel.
+Using some images from unsplash, create a image carousel. Try it first in Bootstrap and then in SCSS.
 
-> Hint: https://www.embla-carousel.com/examples/basic/
-
+> Hint:
+>
+> https://getbootstrap.com/docs/5.2/components/carousel/
+>
+> https://www.embla-carousel.com/examples/static/
