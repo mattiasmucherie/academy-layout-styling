@@ -90,7 +90,7 @@ When you click on one of the links, the link should be deleted from the DOM.
 
 ## Exercise 1
 
-Create a function `getPastTime(callback)` that returns the time five (5) seconds ago without calculating the time with the Date object.
+Create a function `getPastTime(callback)` that returns the seconds of the current time five (5) seconds ago.
 
 Example use:
 
@@ -119,7 +119,7 @@ concatStrings("hello", "world", function (joinedString) {
 
 ## Exercise 3
 
-Create a function `promiseMeThis(string)` that returns a promise that resolves after 2 seconds with the text `I'll try to promise the following: <string>`.
+Create a function `promiseMeThis(str)` that returns a promise that resolves after 2 seconds with the text `I'll try to promise the following: <str>`. If the input is not a string, reject after 2 seconds with the text `I'll have to reject: <str>`.
 
 Example use:
 
@@ -127,6 +127,12 @@ Example use:
 promiseMeThis("To keep my promises").then((result) => {
   console.log(result); //-> I'll try to promise the following: To keep my promises
 });
+
+promiseMeThis(["To", "try"])
+  .then()
+  .catch((err) => {
+    console.log(err); //-> I'll have to reject: ["To", "try"]
+  });
 ```
 
 ## Exercise 4
@@ -153,7 +159,7 @@ getWordPlays().then((rhyme) => {
 
 ### Bonus:
 
-Use a anyonymous self calling method and await the result instead of using .then()
+Use a anonymous self calling method and await the result instead of using .then()
 
 # Layout and Styling
 
