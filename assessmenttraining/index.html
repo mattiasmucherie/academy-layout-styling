@@ -14,7 +14,9 @@
     </form>
     <script>
       const rndColor = () => {
-        return `rgb(${50 + Math.random() * 206}, ${50 + Math.random() * 206}, ${50 + Math.random() * 206})`;
+        return `rgb(${50 + Math.random() * 206}, ${50 + Math.random() * 206}, ${
+          50 + Math.random() * 206
+        })`;
       };
       document.querySelector(".thelink").addEventListener("click", (e) => {
         e.target.style.color = rndColor();

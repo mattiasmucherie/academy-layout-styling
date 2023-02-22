@@ -86,6 +86,114 @@ When you click on one of the links, the link should be deleted from the DOM.
 
 > Hint: Look at `document.createElement(), element.appendChild(), element.remove()`
 
+## Exercise 6
+
+With the starting HTML code:
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercise: Modify the DOM with JavaScript</title>
+  </head>
+  <body>
+    <h1>Shopping List</h1>
+    <ul id="shopping-list">
+      <li class="item">Eggs</li>
+      <li class="item">Bread</li>
+      <li class="item">Milk</li>
+      <li class="item">Butter</li>
+      <li class="item">Cheese</li>
+    </ul>
+  </body>
+</html>
+```
+
+Use the DOM API to alter the document to the following:
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercise: Modify the DOM with JavaScript</title>
+  </head>
+  <body>
+    <h1>Shopping List</h1>
+    <ul id="shopping-list">
+      <li class="item">Eggs</li>
+      <li class="item">Bread</li>
+      <li class="item">Milk</li>
+      <li class="item">Butter</li>
+      <li class="item">Cheese</li>
+      <li class="item">Apples</li>
+      <li class="item">Oranges</li>
+      <li class="item">Bananas</li>
+    </ul>
+    <button id="remove-last-item">Remove Last Item</button>
+  </body>
+</html>
+```
+
+1. Add three new items to the shopping list: "Apples", "Oranges", and "Bananas".
+1. Add a button below the shopping list with the id "remove-last-item".
+1. When the "remove-last-item" button is clicked, remove the last item from the shopping list.
+
+## Exercise 7
+
+Using the starting HTML code:
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercise: Create a To-Do List</title>
+  </head>
+  <body>
+    <h1>To-Do List</h1>
+    <form>
+      <label for="new-item">New Item:</label>
+      <input type="text" id="new-item" name="item" />
+      <button type="submit">Add</button>
+    </form>
+    <ul id="todo-list">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+  </body>
+</html>
+```
+
+1. When the form is submitted, add a new item to the list with the text entered in the input field.
+1. When an item is clicked, toggle a "completed" class on it to mark it as completed. (Tip: `text-decoration: line-through;`)
+1. Add a "Delete" button to each item that removes it from the list when clicked.
+1. Add a "Clear Completed" button that removes all completed items from the list.
+
+The final HTML output should look something like:
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercise: Create a To-Do List</title>
+  </head>
+  <body>
+    <h1>To-Do List</h1>
+    <form>
+      <label for="new-item">New Item:</label>
+      <input type="text" id="new-item" name="item" />
+      <button type="submit">Add</button>
+    </form>
+    <ul id="todo-list">
+      <li class="completed">Item 1 <button class="delete">Delete</button></li>
+      <li>Item 2 <button class="delete">Delete</button></li>
+      <li>Item 3 <button class="delete">Delete</button></li>
+    </ul>
+    <button id="clear-completed">Clear Completed</button>
+  </body>
+</html>
+```
+
 # Async
 
 ## Exercise 1
@@ -160,6 +268,100 @@ getWordPlays().then((rhyme) => {
 ### Bonus:
 
 Use a anonymous self calling method and await the result instead of using .then()
+
+## Exercise 5
+
+Create a function `calculate(num1, num2, operation, callback)` that takes two numbers (`num1` and `num2`), an arithmetic operation (`operation`), and a function `callback`. The function should perform the specified operation on the two numbers and call the callback with the result.
+
+The possible arithmetic operations are:
+
+- "add" (addition)
+- "subtract" (subtraction)
+- "multiply" (multiplication)
+- "divide" (division)
+
+If an invalid operation is provided, the function should call the callback with an error message string.
+
+Example use:
+
+```js
+calculate(4, 2, "add", function (result) {
+  console.log(result); //-> 6
+});
+
+calculate(4, 2, "subtract", function (result) {
+  console.log(result); //-> 2
+});
+
+calculate(4, 2, "multiply", function (result) {
+  console.log(result); //-> 8
+});
+
+calculate(4, 2, "divide", function (result) {
+  console.log(result); //-> 2
+});
+
+calculate(4, 2, "invalid", function (result) {
+  console.log(result); //-> "Invalid operation"
+});
+```
+
+## Exercise 6
+
+Implement a function `areObjectsEqual` that takes two objects as arguments and returns a promise that resolves with a boolean indicating whether or not they are equal. Two objects are considered equal if they have the same properties with the same values.
+
+Example use cases:
+
+```js
+const obj1 = { name: "John", age: 25 };
+const obj2 = { age: 25, name: "John" };
+const obj3 = { name: "Jane", age: 30 };
+
+areObjectsEqual(obj1, obj2).then((result) => {
+  console.log(result); // true
+});
+
+areObjectsEqual(obj1, obj3).then((result) => {
+  console.log(result); // false
+});
+```
+
+Requirements:
+
+- The areObjectsEqual function should take in two objects as arguments.
+- The areObjectsEqual function should return a promise that resolves with a boolean indicating whether or not the two objects are equal.
+- The function should ignore the ordering of properties within the objects.
+- The promise should reject if either argument is not an object.
+
+## Exercise 7 (extra hard)
+
+Create a function `filterArray(array, filterFunction, callback)` that takes an array, a function (`filterFunction`) to use as a filter, and a callback function. The function should use the `filterFunction` to filter the array and return a new array with only the elements that pass the filter. The function should then call the `callback` function with the new array as an argument.
+
+Example use:
+
+```js
+const originalArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+filterArray(
+  originalArray,
+  function (num) {
+    return num % 2 === 0;
+  },
+  function (filteredArray) {
+    console.log(filteredArray); //-> [2, 4, 6, 8, 10]
+  }
+);
+
+filterArray(
+  originalArray,
+  function (num) {
+    return num > 5;
+  },
+  function (filteredArray) {
+    console.log(filteredArray); //-> [6, 7, 8, 9, 10]
+  }
+);
+```
 
 # Layout and Styling
 
