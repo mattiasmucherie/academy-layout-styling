@@ -42,7 +42,7 @@ Given the following HTML, when the user pushes the button the text in the input-
     <!-- ... -->
     <form>
       <input type="text" class="thetext" value="I should be reversed" />
-      <input type="button" class="thebutton" value="Reverse text" />
+      <button type="submit" class="thebutton">Reverse text</button>
     </form>
     <!-- ... -->
   </html>
